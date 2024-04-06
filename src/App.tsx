@@ -10,29 +10,18 @@ const App = () => {
   const dispatch = useDispatch();
 
 
-  const handleAddTodo = (text) => {
+  const handleAddTodo = (text: string) => {
     dispatch(addTodo(text)),
     setText('');
   }
-
-  // const toggleTodo = (todoId) => {
-  //   setTodos(todos.map((todo) => todo.id === todoId ? {...todo, completed: !todo.completed} : todo ));
-  // }
-
-  // const removeTodo = (todoId) => {
-  //   setTodos(todos.filter((todo) => todo.id !== todoId))
-  // }
-
 
   return (
     <div className="App">
       <InputField 
         text={text}
-        // addTodos={addTodos}
         handleAddTodo={handleAddTodo}
         setText={setText}
       />
-
       <TodoList/>
 
     </div>

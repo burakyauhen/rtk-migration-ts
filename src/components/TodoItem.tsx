@@ -1,10 +1,17 @@
-import { useDispatch } from "react-redux";
 import { toggleTodo, deleteTodo } from "../store/TodosSlice";
+import { useAppDispatch } from "../hooks";
+import { FC } from "react";
 
-const TodoItem = ({ id, title, completed }) => {
-    const dispatch = useDispatch();
+interface TodoItemProps {
+  id: string;
+  title: string;
+  completed: boolean;
+}
+
+const TodoItem: FC<TodoItemProps> = ({ id, title, completed }) => {
+    const dispatch = useAppDispatch();
     return (
-        <li>
+      <li>
         <input type="checkbox" checked={completed} onChange={() => dispatch(toggleTodo(id))} />
         <span>{title}</span>
         <span className="delete" onClick={()=> dispatch(deleteTodo(id))} >&times;</span>

@@ -1,8 +1,8 @@
 import { TodoItem } from "./TodoItem";
-import { useDispatch, useSelector } from "react-redux";
+import { useAppSelector } from "../hooks";
 
 const TodoList = () => {
-    const todos = useSelector((state) => state.todos.value);
+    const todos = useAppSelector((state) => state.todos.value);
     return (
         todos.map((todo) => (
             <TodoItem
