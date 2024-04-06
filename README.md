@@ -1,7 +1,8 @@
-Purpose: migration rtk to typescript
+# React + Vite
 
-sources: 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-1. https://www.youtube.com/watch?v=uRlh6-tHWEE&list=PLiZoB8JBsdznQv3kAEvTzDP2qjaUI8Vo7
+Currently, two official plugins are available:
 
-2. https://redux-toolkit.js.org/tutorials/typescript
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
