@@ -1,8 +1,8 @@
-const InputField = ({text, addTodos, setText}) => {
+const InputField = ({text, handleAddTodo, setText}) => {
     return (
         <label>
         <input type='text' value={text} onChange={(e) => setText(e.target.value)} />
-        <button onClick={() => addTodos()}>Add todo</button>
+        <button onClick={() => handleAddTodo(text)}>Add todo</button>
       </label> 
     );
 } 
